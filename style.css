@@ -7,35 +7,40 @@
   padding: 0;
 }
 
-/* Body and Background */
-
-
+/* Body and Background 
 body {
+   margin: 0;
+  font-family: 'Poppins', sans-serif;
   
-  background-size: cover; /* Cover the entire viewport */
-  background-size: contain;
-  background-image: url("background.jpg"); /* Replace with your image path */
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 100vh;
-  font-family: 'Poppins', sans-serif; /* Apply the new font */
-  color: #333;
-  line-height: 1.6;
+  background-size: 400% 400%;
+}
+*/
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(270deg, #ff6347, #e392fe, #ff6347, #e392fe);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
 
-} 
-
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 /* Container */
 .container {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
-}
+  padding: 10px;
+  
+  }
 
 /* Header */
 header {
   
-
-  background-size: ;
+   background-size: 10px;
   padding: 10px 20px;
   background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
   border-bottom: 2px solid #ddd;
@@ -50,7 +55,9 @@ header {
   margin: 20px; /* Adjust as needed to create space around the header */
 
   /* Optional: Add a subtle shadow */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  max-width: 900px;
+  margin: 20px auto;
 }
 
 header h1 {
@@ -67,8 +74,10 @@ nav {
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   z-index: 1000; /* Ensure nav stays above other content */
+  border-radius: 15px;
+
 }
 
 nav ul {
@@ -105,8 +114,10 @@ nav a:hover {
   background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
   padding: 40px 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   margin-bottom: 60px;
+  max-width: 900px;
+  margin: 20px auto;
 }
 
 #about h2 {
@@ -140,50 +151,7 @@ nav a:hover {
   font-weight: 600; /* Semi-bold */
   margin-right: 10px;
 }
-/* Certificate Section */
-#certificate {
-  padding: 20px 20px;
-  text-align: center;
-  background-color: #f8f9fa; /* Light background to differentiate from other sections */
-  border-radius: 8px; /* Rounded corners for the section */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  margin-bottom: 30px; /* Space below the section */
-  width: 50%;
-}
 
-#certificate h2 {
-  font-size: 2rem; /* Font size for the section heading */
-  margin-bottom: 20px; /* Space below the heading */
-}
-
-.certificate-img {
-  max-width: 100%; /* Responsive width */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Rounded corners for the image */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow around the image */
-   object-fit: fill;
-}
-
-/* Certificate Section */
-#certificate {
-  padding: 10px 10px;
-  text-align: center;
-  border-radius: 8px; /* Rounded corners for the section */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  margin-bottom: 60px; /* Space below the section */
-}
-
-#certificate h2 {
-  font-size: 2rem; /* Font size for the section heading */
-  margin-bottom: 20px; /* Space below the heading */
-}
-
-.certificate-img {
-  max-width: 50%; /* Responsive width */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Rounded corners for the image */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow around the image */
-}
 
 /* Image Gallery */
 .image-gallery {
@@ -192,13 +160,21 @@ nav a:hover {
     justify-content: center; /* Center images horizontally */
     flex-wrap: wrap; /* Allow wrapping to multiple lines if necessary */
     margin-top: 20px; /* Space above the gallery */
+
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  max-width: 560px; 
 }
 
 .image-gallery img {
     width: 50px; /* Adjust as needed */
     height: auto;
     border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Shadow for images */
 }
 
 
@@ -225,13 +201,14 @@ section {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+
 }
 
 video {
   width: 300px;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   object-fit: cover;
 }
 
@@ -242,7 +219,7 @@ video {
   padding: 20px;
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   margin: 0 auto;
   max-width: 560px;
 }
@@ -270,7 +247,7 @@ form {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 label {
@@ -332,7 +309,9 @@ footer p {
   border-radius: 25px;
   font-size: 16px;
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease; 
+  margin-bottom: 20px; /* Adjust the value as needed */
+
 }
 
 .animated-btn:hover {
@@ -348,19 +327,36 @@ footer p {
   margin-top: 20px;
   padding: 20px;
    border-radius: 10px;
-}
 
+}
+.gif-container {
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Center the GIF horizontally */
+  align-items: center; /* Center the GIF vertically */
+  flex-direction: column;
+ }
 .visible {
   display: block;
   opacity: 1;
 }
 
-/* Style for the GIF */
-.gif-container {
-  text-align: center;
-}
-
 .gif-container img {
   max-width: 100%;
   height: auto;
+}
+
+
+
+
+#contact {
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 20px; /* Add some padding */
+  border-radius: 10px; /* Optional: rounded corners */
+  max-width: 900px;
+  margin: 20px auto;
+ }
+
+#contact .container {
+   margin: auto; /* Center the container */
 }
