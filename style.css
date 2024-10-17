@@ -151,6 +151,12 @@ nav a:hover {
   font-weight: 600; /* Semi-bold */
   margin-right: 10px;
 }
+#about img{
+  height: 190px;
+  width: 225px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4)
+}
 
 
 /* Image Gallery */
@@ -345,9 +351,6 @@ footer p {
   max-width: 100%;
   height: auto;
 }
-
-
-
 
 #contact {
   background-color: #f0f0f0; /* Light gray background */
